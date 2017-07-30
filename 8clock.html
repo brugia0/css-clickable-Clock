@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#clipping_clock{height:100px; width:100px; background:#000000; border-radius:100px; line-height:0; position:relative;}
+		#clipping_clock input{display:none;}
+		#clipping_clock label{height:47%; width:47%; background-color:#cccccc; display:inline-block; position:absolute; }
+		
+		#clipping_clock input:checked ~ label{background-color:#FF0000; }
+		
+		#clock1 + label{border-radius: 50px 0 0 0; clip-path: polygon(0 2%, 0 100%, 98% 100%); top:0px; left:0px; margin:2% 0 0 2%;}
+		#clock2 + label{border-radius: 50px 0 0 0; clip-path: polygon(100% 0, 100% 98%, 2% 0);;top:0px; left:0px; margin:2% 0 0 2%;}
+		#clock3 + label{border-radius: 0px 50px 0 0;  clip-path: polygon(0 0%, 98% 0, 0% 98%);top:0px; right:0px; margin:2% 2% 0 0;}
+		#clock4 + label{border-radius: 0px 50px 0 0;  clip-path: polygon(100% 2%, 100% 100%, 2% 100%);top:0px; right:0px; margin:2% 2% 0 0;}
+		#clock5 + label{border-radius: 0px 0 50px 0; clip-path: polygon(2% 0%, 100% 98%, 100% 0);bottom:0px; right:0px; margin:0 2% 2% 0;}
+		#clock6 + label{border-radius: 0px 0 50px 0; clip-path: polygon(0% 2%, 98% 100%, 0 100%);bottom:0px; right:0px; margin:0 2% 2% 0;}
+		#clock7 + label{border-radius: 0px 0 0 50px; clip-path: polygon(100% 2%, 2% 100%, 100% 100%);bottom:0px; left:0px; margin:0 0 2% 2%;}
+		#clock8 + label{border-radius: 0px 0 0 50px; clip-path: polygon(0 0, 98% 0, 0 98%);bottom:0px; left:0px; margin:0 0 2% 2%;}
+	</style>
+</head>
+<body>
+	<div id="clipping_clock">
+		<input type="radio" id="clock8" name="4clock" value="8"><label for="clock8"></label>
+		<input type="radio" id="clock7" name="4clock" value="7"><label for="clock7"></label>
+		<input type="radio" id="clock6" name="4clock" value="6"><label for="clock6"></label>
+		<input type="radio" id="clock5" name="4clock" value="5"><label for="clock5"></label>
+		<input type="radio" id="clock4" name="4clock" value="4"><label for="clock4"></label>
+		<input type="radio" id="clock3" name="4clock" value="3"><label for="clock3"></label>
+		<input type="radio" id="clock2" name="4clock" value="2"><label for="clock2"></label>
+		<input type="radio" id="clock1" name="4clock" value="1"><label for="clock1"></label>
+	</div>
+</body>
+</html>
